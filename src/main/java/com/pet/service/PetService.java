@@ -34,11 +34,10 @@ import jakarta.transaction.Transactional;
 @Transactional
 public class PetService {
 	
-	@Value("${file.upload-dir}")
-	private String uploadDir;
-	
-	@Value("${server.tomcat.basedir}")
-	private String rootURL;
+
+	private String uploadDir="";
+
+	private String rootURL="";
 	
 	@Autowired
 	private PetRepository petRepository;
